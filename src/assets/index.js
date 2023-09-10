@@ -29,9 +29,9 @@ import mightyEgg from "./company/mightyEgg.png";
 import cleinsight from "./company/cleinsight.jpg";
 import bractIT from "./company/bracit.jpg";
 
-import ecovia from "./ecovia.jpg";
-import qatar from "./qatar.jpg";
-import hatil from "./hatil.jpg";
+import ecovia from "./ecovia.png";
+import qatar from "./qatar.png";
+import hatil from "./hatil.png";
 
 export {
   logo,
