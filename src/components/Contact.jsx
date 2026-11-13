@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
+import { profile } from "../constants";
 import { slideIn } from "../utils/motion";
 
 const Contact = () => {
@@ -37,9 +38,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: profile.name,
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: profile.email,
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -75,10 +76,40 @@ const Contact = () => {
         <p className={styles.sectionSubText}>Get in touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
 
+        <p className='mt-4 text-secondary text-[15px] leading-[26px]'>
+          Open to interesting engineering problems and research
+          collaborations. Send a message here, or email me at{" "}
+          <a
+            href={`mailto:${profile.email}`}
+            className='text-white underline underline-offset-4'
+          >
+            {profile.email}
+          </a>
+          .
+        </p>
+
+        <div className='mt-4 flex flex-wrap gap-5'>
+          {[
+            ["GitHub", profile.github],
+            ["LinkedIn", profile.linkedin],
+            ["Google Scholar", profile.scholar],
+          ].map(([label, href]) => (
+            <a
+              key={label}
+              href={href}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-[#915EFF] hover:text-white text-[15px] font-semibold'
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
+          className='mt-10 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
             <span className='text-white font-medium mb-4'>Your Name</span>
@@ -87,7 +118,8 @@ const Contact = () => {
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder="What's your good name?"
+              placeholder="What's your name?"
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -98,7 +130,8 @@ const Contact = () => {
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="What's your web address?"
+              placeholder="What's your email address?"
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
@@ -109,13 +142,15 @@ const Contact = () => {
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What you want to say?'
+              placeholder='What would you like to say?'
+              required
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <button
             type='submit'
+            disabled={loading}
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
           >
             {loading ? "Sending..." : "Send"}

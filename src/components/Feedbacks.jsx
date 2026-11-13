@@ -18,7 +18,7 @@ const FeedbackCard = ({
     variants={fadeIn("", "spring", index * 0.5, 0.75)}
     className='bg-black-200 p-10 rounded-3xl xs:w-[320px] w-full'
   >
-    <p className='text-white font-black text-[48px]'>"</p>
+    <p className='text-white font-black text-[48px]'>“</p>
 
     <div className='mt-1'>
       <p className='text-white tracking-wider text-[18px]'>{testimonial}</p>
@@ -29,15 +29,26 @@ const FeedbackCard = ({
             <span className='blue-text-gradient'>@</span> {name}
           </p>
           <p className='mt-1 text-secondary text-[12px]'>
-            {designation} of {company}
+            {designation}, {company}
           </p>
         </div>
 
-        <img
-          src={image}
-          alt={`feedback_by-${name}`}
-          className='w-10 h-10 rounded-full object-cover'
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={`feedback_by-${name}`}
+            loading='lazy'
+            className='w-10 h-10 rounded-full object-cover'
+          />
+        ) : (
+          <div className='w-10 h-10 rounded-full green-pink-gradient flex justify-center items-center text-white text-[14px] font-bold'>
+            {name
+              .split(" ")
+              .map((part) => part[0])
+              .slice(0, 2)
+              .join("")}
+          </div>
+        )}
       </div>
     </div>
   </motion.div>

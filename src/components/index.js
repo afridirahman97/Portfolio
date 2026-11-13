@@ -7,6 +7,8 @@ import Experience from "./Experience";
 import Works from "./Works";
 import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
+import Research from "./Research";
+import Footer from "./Footer";
 import CanvasLoader from "./Loader";
 
 
@@ -19,6 +21,8 @@ export {
   Works,
   Feedbacks,
   Contact,
+  Research,
+  Footer,
   CanvasLoader,
   EarthCanvas, 
   BallCanvas, 

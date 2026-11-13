@@ -31,7 +31,15 @@ export const navLinks = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Experience",
+  },
+  {
+    id: "research",
+    title: "Research",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -39,22 +47,71 @@ export const navLinks = [
   },
 ];
 
+export const profile = {
+  name: "Afridi Ibn Rahman",
+  role: "Software Engineer at BRAC IT",
+  location: "Dhaka, Bangladesh",
+  email: "afridirahman97@gmail.com",
+  github: "https://github.com/afridirahman97",
+  linkedin: "https://www.linkedin.com/in/afridi-ibn-rahman/",
+  scholar: "https://scholar.google.com/citations?user=LTGHL_wAAAAJ&hl=en",
+};
+
 const services = [
   {
-    title: "Web Developer",
+    title: "Full-Stack Web Developer",
     icon: web,
   },
   {
-    title: "React Native Developer",
-    icon: mobile,
-  },
-  {
-    title: "Frontend Developer",
+    title: "Backend Engineer",
     icon: backend,
   },
   {
-    title: "Backend Developer",
+    title: "Mobile App Developer",
+    icon: mobile,
+  },
+  {
+    title: "Machine Learning Researcher",
     icon: creator,
+  },
+];
+
+const skillGroups = [
+  {
+    title: "Languages",
+    items: ["TypeScript", "JavaScript", "Java", "Python", "C++"],
+  },
+  {
+    title: "Frontend & mobile",
+    items: [
+      "Angular",
+      "React",
+      "Next.js",
+      "React Native",
+      "Flutter",
+      "Tailwind CSS",
+      "Three.js",
+    ],
+  },
+  {
+    title: "Backend & data",
+    items: [
+      "Spring Boot",
+      "JHipster",
+      "Node.js",
+      "Flask",
+      "PostgreSQL",
+      "MongoDB",
+      "Firebase",
+    ],
+  },
+  {
+    title: "AI / ML",
+    items: ["TensorFlow", "Keras", "scikit-learn", "CNNs", "LLM apps & RAG"],
+  },
+  {
+    title: "Infra & tools",
+    items: ["Docker", "Git", "GitHub Actions", "Cloudflare Workers", "Tauri"],
   },
 ];
 
@@ -115,14 +172,16 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Junior Software Developer",
-    company_name: "Mighty Egg",
-    icon: mightyEgg,
-    iconBg: "#383E56",
-    date: "February 2021 - October 2021",
+    title: "Software Engineer",
+    company_name: "BRAC IT",
+    icon: bractIT,
+    iconBg: "#FFFFFF",
+    date: "March 2023 - Present",
     points: [
-      "Developing and maintaining web applications using Wordpress other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Building and maintaining microfinance web applications with Spring Boot and Angular.",
+      "Working across the stack, from REST APIs and business logic on the backend to responsive, cross-browser interfaces on the frontend.",
+      "Collaborating with designers, product managers and other engineers to ship features for business users.",
+      "Taking part in code reviews and giving constructive feedback to teammates.",
     ],
   },
   {
@@ -132,24 +191,119 @@ const experiences = [
     iconBg: "#000000",
     date: "November 2021 - November 2022",
     points: [
-      "Developing and maintaining interactive and gamified Quiz, Survey and Feedback collection platforms using React.js and other related technologies.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Integrating survey system into the client's landing page as a plugin such as Hatil, MyGp app, Rasel Industry etc.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led frontend development of interactive, gamified quiz, survey and feedback-collection platforms built with React.",
+      "Integrated the survey system as a plugin into client products, including Hatil, the MyGP app and Rasel Industries.",
+      "Implemented responsive design and ensured cross-browser compatibility.",
+      "Took part in code reviews and gave constructive feedback to other developers.",
     ],
   },
   {
-    title: "Software Engineer",
-    company_name: "BracIT",
-    icon: bractIT,
-    iconBg: "#FFFFFF",
-    date: "March 2023 - Present",
+    title: "Junior Software Developer",
+    company_name: "Mighty Egg",
+    icon: mightyEgg,
+    iconBg: "#383E56",
+    date: "February 2021 - October 2021",
     points: [
-      "Developing and maintaining web applications for micro finance using Spring boot and Angular Js.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Developed and maintained client websites using WordPress and related technologies.",
+      "Worked with designers, product managers and other developers to deliver high-quality products.",
     ],
+  },
+];
+
+const publications = [
+  {
+    title: "Lung Cancer Detection Using Ensemble Technique of CNN",
+    authors: [
+      "Zebel-E-Noor Akhand",
+      "Afridi Ibn Rahman",
+      "Anirudh Sarda",
+      "Md. Zubayer Ahmed Fahim",
+    ],
+    etAl: true,
+    venue:
+      "Proceedings of International Conference on Information and Communication Technology for Development (ICICTD), Springer",
+    year: 2023,
+    type: "Conference paper",
+    summary:
+      "Uses transfer learning with pre-trained CNNs (ResNet101, VGG16, InceptionV3 and DenseNet169) to classify chest CT images as adenocarcinoma, large cell carcinoma, squamous cell carcinoma or normal, and compares the models' performance.",
+    tags: ["Medical imaging", "Transfer learning", "Ensemble CNN"],
+    link: "https://doi.org/10.1007/978-981-19-7528-8_39",
+    code: "https://github.com/afridirahman97/Lung-Cancer-Detector",
+  },
+  {
+    title:
+      "Continuous Sign Language Interpretation to Text Using Deep Learning Models",
+    authors: ["Afridi Ibn Rahman"],
+    etAl: true,
+    venue: "IEEE conference paper",
+    year: 2022,
+    type: "Conference paper",
+    summary:
+      "Builds an enriched dataset of common ASL phrases used in professional meetings, then detects and classifies signs with CNN and LSTM models (93.75% and 96.54% accuracy). Proposes deploying the LSTM in video-conferencing tools for real-time captions.",
+    tags: ["Sign language", "Action recognition", "CNN", "LSTM"],
+    link: "https://ieeexplore.ieee.org/document/10054721/",
+  },
+  {
+    title:
+      "Intracranial Hemorrhage Detection on CT Scan Images using Transfer Learning Approach of Convolutional Neural Network",
+    authors: [
+      "Afridi Ibn Rahman",
+      "Subhi Bhuiyan",
+      "Ziad Hasan Reza",
+      "Jasarat Zaheen",
+      "Tasin Al Nahian Khan",
+      "Dewan Ziaul Karim",
+    ],
+    venue:
+      "International Conference on Computing Advancements (ICCA), ACM",
+    year: 2022,
+    type: "Conference paper",
+    summary:
+      "Benchmarks six pre-trained models (EfficientNetB6, DenseNet121, ResNet50, InceptionResNetV2, InceptionV3 and VGG16) against a custom 11-layer CNN for binary hemorrhage detection on head CT scans. EfficientNetB6 performed best at 95.99% accuracy, and a web app demonstrates real-world use.",
+    tags: ["Medical imaging", "Transfer learning", "EfficientNet"],
+    link: "https://doi.org/10.1145/3542954.3542980",
+    code: "https://github.com/afridirahman97/Detection-of-Intracranial-Hemorrhage",
+  },
+  {
+    title:
+      "Comparative Analysis on Joint Modeling of Emotion and Abuse Detection in Bangla Language",
+    authors: [
+      "Afridi Ibn Rahman",
+      "Farhan",
+      "Zebel-E-Noor Akhand",
+      "Md Asad Uzzaman Noor",
+      "Jubayer Islam",
+      "Md. Motahar Mahtab",
+      "Md Humaion Kabir Mehedi",
+      "Annajiat Alim Rasel",
+    ],
+    venue:
+      "Advances in Computing and Data Sciences (ICACDS), Springer, pp. 199-209",
+    year: 2022,
+    type: "Conference paper",
+    summary:
+      "A comparative review of Bangla-language research on emotion and abusive-language detection, assessing each model's performance, accuracy, ease of implementation and complexity.",
+    tags: ["NLP", "Bangla", "Emotion detection", "Abuse detection"],
+    link: "https://doi.org/10.1007/978-3-031-12641-3_17",
+  },
+  {
+    title:
+      "Detection of Intracranial Hemorrhage on CT Scan Images Using Convolutional Neural Network",
+    authors: [
+      "Afridi Ibn Rahman",
+      "Subhi Bhuiyan",
+      "Ziad Hasan Reza",
+      "Jasarat Zaheen",
+      "Tasin Al Nahian Khan",
+    ],
+    venue:
+      "BSc thesis, Department of Computer Science and Engineering, BRAC University. Supervisor: Mohammad Zavid Parvez",
+    year: 2021,
+    type: "Undergraduate thesis",
+    summary:
+      "Applies convolutional neural networks with transfer learning to help diagnose intracranial hemorrhage from CT scan images. This work grew into the ICCA 2022 paper above.",
+    tags: ["Medical imaging", "CNN", "Thesis"],
+    link: "http://hdl.handle.net/10361/15890",
   },
 ];
 
@@ -158,7 +312,7 @@ const testimonials = [
     testimonial:
       "I had the pleasure of working with Afridi on a complex e-commerce project, and I was thoroughly impressed. His deep expertise in web development shone through in every aspect of the project. From designing a user-friendly interface to implementing robust backend functionalities, Afridi demonstrated a level of skill and professionalism that is truly commendable. His ability to tackle challenges head-on and deliver high-quality code within tight deadlines is a testament to their dedication and technical prowess. I would not hesitate to recommend Afridi for any web development project.",
     name: "Rizwanul Hoque Ratul",
-    designation: "Software Engineer |",
+    designation: "Software Engineer",
     company: "Optimizely",
     image: "https://avatars.githubusercontent.com/u/63251500?v=4",
   },
@@ -176,28 +330,103 @@ const testimonials = [
     name: "Sayeem Abdullah",
     designation: "Software Engineer",
     company: "Intercloud Limited",
-    image: "https://scontent.fdac157-1.fna.fbcdn.net/v/t39.30808-1/358456903_10221567318749249_8548393009285444350_n.jpg?stp=c0.56.200.200a_dst-jpg_p200x200&_nc_cat=107&ccb=1-7&_nc_sid=fe8171&_nc_eui2=AeFN6cGGT6FR18bvuJvUVCk02zSzTT6_OwHbNLNNPr87ATTjfSDJizLIFWRNOgf6tY1Tb9aKsj8Y-KJM3XzGsW61&_nc_ohc=MZarMmIUSREAX_GNymk&_nc_ht=scontent.fdac157-1.fna&oh=00_AfBs3eNYuxIsfhzMfHBGNjEBIW9f2gmPMon0hddi_vYnpw&oe=650319F1",
   },
 ];
 
 const projects = [
   {
+    name: "Intracranial Hemorrhage Detection",
+    description:
+      "A convolutional neural network that flags brain hemorrhage in head CT images, served through a Flask web app: upload a scan, get a prediction.",
+    tags: [
+      { name: "TensorFlow", color: "blue-text-gradient" },
+      { name: "CNN", color: "green-text-gradient" },
+      { name: "Flask", color: "pink-text-gradient" },
+      { name: "Medical Imaging", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/afridirahman97/Detection-of-Intracranial-Hemorrhage",
+  },
+  {
+    name: "Lung Cancer Detector",
+    description:
+      "Classifies chest CT scans with an ensemble of pre-trained CNNs, wrapped in an upload-and-predict web app.",
+    tags: [
+      { name: "TensorFlow", color: "blue-text-gradient" },
+      { name: "Transfer Learning", color: "green-text-gradient" },
+      { name: "Ensembles", color: "pink-text-gradient" },
+      { name: "Flask", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/afridirahman97/Lung-Cancer-Detector",
+  },
+  {
+    name: "Agentic Password Vault",
+    description:
+      "A secure, minimalist desktop password manager built with Tauri (Rust + React), made as a hands-on workshop on agentic AI coding workflows.",
+    tags: [
+      { name: "Tauri", color: "blue-text-gradient" },
+      { name: "Rust", color: "green-text-gradient" },
+      { name: "React", color: "pink-text-gradient" },
+      { name: "TypeScript", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/afridirahman97/agentic-password-vault",
+  },
+  {
+    name: "Voice-Controlled News Application",
+    description:
+      "A React news app you control by voice: ask for the latest headlines and navigate articles hands-free, powered by the Alan AI voice SDK.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Alan AI", color: "green-text-gradient" },
+      { name: "Material UI", color: "pink-text-gradient" },
+    ],
+    image: 
+      "https://firebasestorage.googleapis.com/v0/b/githubs-30fab.appspot.com/o/screencapture-news-app-c61c8-web-app-2020-12-12-13_45_02.png?alt=media&token=6ffcc4c9-537f-4dba-92a8-c8175cad0518",
+    source_code_link: "https://github.com/afridirahman97/Voice-Assisted-News-Site",
+  },
+  {
+    name: "Customer Survey System for Hatil",
+    description:
+      "A gamified survey module embedded into the Hatil website, built as a Cleinsight product. The source is private.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "CSS", color: "pink-text-gradient" },
+    ],
+    image: hatil,
+  },
+  {
+    name: "Covid-19 Updates",
+    description:
+      "A dashboard showing Covid-19 statistics for each location on a world map.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "REST API", color: "green-text-gradient" },
+      { name: "CSS", color: "pink-text-gradient" },
+    ],
+    image: 
+      "https://firebasestorage.googleapis.com/v0/b/githubs-30fab.appspot.com/o/screencapture-covid-ea0e8-firebaseapp-2020-09-18-18_22_46.png?alt=media&token=67e1e537-f7b2-4836-a064-f75f55a30f07",
+    source_code_link: "https://github.com/afridirahman97/covid_updates",
+    live_link: "https://covid-ea0e8.firebaseapp.com/",
+  },
+  {
+    name: "PID Line-Following Robot",
+    description:
+      "A PID-controlled line follower simulated in Webots, with controllers written in C++ and Python.",
+    tags: [
+      { name: "Robotics", color: "blue-text-gradient" },
+      { name: "C++", color: "green-text-gradient" },
+      { name: "Python", color: "pink-text-gradient" },
+      { name: "Webots", color: "orange-text-gradient" },
+    ],
+    source_code_link: "https://github.com/afridirahman97/PID-Controlled-lline-following-robot",
+  },
+  {
     name: "Ecovia",
     description:
-      "Landing page for Ecovia ltd. A biodegradable ploymar packaging company.",
+      "Landing page for Ecovia Ltd, a biodegradable polymer packaging company.",
     tags: [
-      {
-        name: "Wordpress",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Divi Theme",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "WordPress", color: "blue-text-gradient" },
+      { name: "Divi Theme", color: "green-text-gradient" },
     ],
     image: ecovia,
     source_code_link: "https://github.com/afridirahman97/EcoVia-Limited",
@@ -205,92 +434,22 @@ const projects = [
   {
     name: "Qatar AC Services",
     description:
-      "Landing page for Qatar AC Services ltd, A Doha based AC repairment and service providing company with one click call feature.",
+      "Landing page for a Doha-based AC repair and servicing company, with a one-click call feature.",
     tags: [
-      {
-        name: "Wordpress",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Divi Theme",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
+      { name: "WordPress", color: "blue-text-gradient" },
+      { name: "Divi Theme", color: "green-text-gradient" },
     ],
     image: qatar,
     source_code_link: "https://github.com/afridirahman97/Qatar-AC-Services-",
   },
-  {
-    name: "Customer Survey System for Hatil",
-    description:
-      "As a product of Cleinsight, A gamified survey module imbeded into Hatil website.",
-    tags: [
-      {
-        name: "React Js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: hatil,
-    source_code_link: "https://github.com/",
-  },
-
-  {
-    name: "Covid-19 Update Project",
-    description:
-      "A web application displaying covid updates in each location of the world map",
-    tags: [
-      {
-        name: "React Js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "REST API",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/githubs-30fab.appspot.com/o/screencapture-covid-ea0e8-firebaseapp-2020-09-18-18_22_46.png?alt=media&token=67e1e537-f7b2-4836-a064-f75f55a30f07",
-    source_code_link: "https://github.com/afridirahman97/covid_updates",
-  },
-
-  {
-    name: "Voice Controlled News Application",
-    description:
-      "A news web application which can be operated by voice controll ",
-    tags: [
-      {
-        name: "React Js",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Alan AI",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/githubs-30fab.appspot.com/o/screencapture-news-app-c61c8-web-app-2020-12-12-13_45_02.png?alt=media&token=6ffcc4c9-537f-4dba-92a8-c8175cad0518",
-    source_code_link:
-      "https://github.com/afridirahman97/Voice-Assisted-News-Site",
-  },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export {
+  services,
+  skillGroups,
+  technologies,
+  experiences,
+  publications,
+  testimonials,
+  projects,
+};
