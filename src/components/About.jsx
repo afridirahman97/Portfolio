@@ -23,7 +23,7 @@ const ServiceCard = ({ index, title, icon }) => (
       >
         <img
           src={icon}
-          alt="web-development"
+          alt={title}
           className="w-16 h-16 object-contain"
         />
 
@@ -47,18 +47,16 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I possess advanced software development skills in Java and JavaScript,
-        specializing in frameworks such as React, Angular, Spring Boot, React
-        Native, and Wordpress. I am currently working as a Software Engineer at
-        BracIT, a company that provides digital solutions to solve business
-        challenges using human-centered design, hybrid methodology, future-proof
-        technologies, and best practices. Prior to that, I had worked as a
-        Junior Software developer at Cleinsight where I developed interactive
-        and gamified Quiz, Survey and Feedback collection platforms as the lead
-        frontend developer. I have a knack for rapid learning and work closely
-        with clients to deliver effective, scalable, and user-centric solutions
-        that address practical challenges. Let's team up to turn your concepts
-        into reality!
+        I'm a Software Engineer at BRAC IT in Dhaka, Bangladesh, where I build
+        microfinance web applications with Spring Boot and Angular. Before
+        that, I led frontend development at Cleinsight, building interactive,
+        gamified quiz, survey and feedback-collection platforms in React. I
+        work mainly in Java, TypeScript and Python, across the stack from
+        backend services to web and mobile interfaces. I hold a BSc in Computer
+        Science and Engineering from BRAC University, and I've published
+        research on deep learning for medical imaging and natural language
+        processing. I learn quickly and enjoy working closely with people to
+        deliver scalable, user-centric solutions to practical problems.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">

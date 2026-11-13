@@ -19,8 +19,9 @@ const Hero = () => {
             Hi, I'm <span className="text-[#915EFF]">Afridi</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm a full-stack web developer proficient in React Js and Spring Boot <br className="sm:block hidden" />
-            I specialize in crafting dynamic and engaging web applications
+            Software Engineer at BRAC IT. I build full-stack web apps,{" "}
+            <br className="sm:block hidden" />
+            AI-assisted tools and deep-learning models for medical imaging
           </p>
         </div>
       </div>
